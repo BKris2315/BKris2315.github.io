@@ -127,5 +127,10 @@
                 hreflang="en"
                 href="http://localhost:1313/cv/"
                 />
+<<<<<<< HEAD
+=======
+  </url><url>
+    <loc>http://localhost:1313/publications/</loc>
+>>>>>>> 8786a57 (Add CV and Pubs)
   </url>
 </urlset>
