@@ -1,0 +1,65 @@
+baseURL = "https://bkris2315.github.io/"
+locale = "en"
+title = "Kristóf Benedek"
+enableEmoji = true
+enableInlineShortcodes = true
+
+[pagination]
+  pagerSize = 10
+
+[taxonomies]
+  tag = "tags"
+
+[markup]
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+  [markup.goldmark.extensions.passthrough]
+    enable = true
+    [markup.goldmark.extensions.passthrough.delimiters]
+      block = [["\\[", "\\]"], ["$$", "$$"]]
+      inline = [["\\(", "\\)"]]
+
+[params]
+  description = "Physicist and programmer: statistical physics, network science, synchronization and power-grid dynamics."
+  role = "Physicist · PhD student"
+  affiliation = "BME Doctoral School of Physical Sciences · HUN-REN Centre for Energy Research"
+  location = "Budapest, Hungary"
+  emails = ["kristof.benedek@edu.bme.hu", "kristof.benedek@ek.hun-ren.hu"]
+
+  # Shown as links on the home page and in the footer. Remove or add freely.
+  [[params.links]]
+    name = "Google Scholar"
+    url = "https://scholar.google.com/citations?user=ROe5PBcAAAAJ"
+  [[params.links]]
+    name = "arXiv"
+    url = "https://arxiv.org/search/?searchtype=author&query=Benedek%2C+Krist%C3%B3f"
+  [[params.links]]
+    name = "GitHub"
+    url = "https://github.com/BKris2315"
+  [[params.links]]
+    name = "LinkedIn"
+    url = "https://www.linkedin.com/in/krist%C3%B3f-benedek-10a78b153/"
+
+[menus]
+  [[menus.main]]
+    name = "Publications"
+    pageRef = "/publications"
+    weight = 10
+  [[menus.main]]
+    name = "Talks"
+    pageRef = "/talks"
+    weight = 20
+  [[menus.main]]
+    name = "CV"
+    pageRef = "/cv"
+    weight = 30
+  [[menus.main]]
+    name = "Blog"
+    pageRef = "/blog"
+    weight = 40
+  [[menus.main]]
+    name = "Tutorials"
+    pageRef = "/tutorials"
+    weight = 50

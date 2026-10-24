@@ -1,0 +1,26 @@
+{{ define "main" }}
+<article>
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    {{ if and (ne .Kind "home") (in (slice "blog" "tutorials") .Section) }}
+    <div class="post-meta">
+      {{ .Date.Format "2006-01-02" }}{{ with .Params.author }} · {{ . }}{{ end }} · {{ .ReadingTime }} min read
+      {{ with .GetTerms "tags" }} · <ul class="tags">{{ range . }}<li><a href="{{ .RelPermalink }}">{{ .LinkTitle | lower }}</a></li>{{ end }}</ul>{{ end }}
+    </div>
+    {{ end }}
+  </header>
+  {{ with .Params.cover }}
+    {{ with $.Resources.Get .src }}
+    <figure class="cover">
+      {{ $img := .Resize "960x webp q80" }}
+      <img src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="{{ $.Params.cover.alt }}">
+      {{ with $.Params.cover.caption }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+    </figure>
+    {{ end }}
+  {{ end }}
+  {{ if and .Params.toc (gt (len .TableOfContents) 40) }}
+  <details class="toc" open><summary>Contents</summary>{{ .TableOfContents }}</details>
+  {{ end }}
+  {{ .Content }}
+</article>
+{{ end }}

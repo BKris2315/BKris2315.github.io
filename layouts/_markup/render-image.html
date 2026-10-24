@@ -1,0 +1,13 @@
+{{/* Markdown images: page-bundle images are resized to WebP (max 960px wide) and lazy-loaded.
+     The optional title becomes a caption with Markdown support. */}}
+{{- $img := .Page.Resources.Get .Destination -}}
+<figure>
+{{- if and $img (ne $img.MediaType.SubType "svg") }}
+  {{- $w := cond (gt $img.Width 960) 960 $img.Width -}}
+  {{- $webp := $img.Resize (printf "%dx webp q80" $w) }}
+  <img src="{{ $webp.RelPermalink }}" width="{{ $webp.Width }}" height="{{ $webp.Height }}" alt="{{ .Text }}" loading="lazy">
+{{- else }}
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" loading="lazy">
+{{- end }}
+{{- with .Title }}<figcaption>{{ . | markdownify }}</figcaption>{{ end }}
+</figure>

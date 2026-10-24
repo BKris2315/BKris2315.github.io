@@ -1,0 +1,15 @@
+{{/* Renders data/publications.yaml grouped by type. Usage: {{< publications >}} */}}
+{{- $pubs := hugo.Data.publications -}}
+{{- $groups := slice
+  (dict "type" "article" "title" "Journal articles")
+  (dict "type" "preprint" "title" "Preprints")
+  (dict "type" "other" "title" "Other publications") -}}
+{{- range $groups }}
+  {{- $title := .title }}
+  {{- with where $pubs "type" .type }}
+<h2 id="{{ $title | urlize }}">{{ $title }}</h2>
+<ul class="pub-list">
+  {{ range . }}{{ partial "pub.html" . }}{{ end }}
+</ul>
+  {{- end }}
+{{- end }}

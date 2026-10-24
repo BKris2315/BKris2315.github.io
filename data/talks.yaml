@@ -1,0 +1,83 @@
+# Conference talks and posters, newest first. Rendered on /talks.
+#
+# Fields:
+#   title, event, year               required
+#   type                             talk | poster | invited
+#   date, location                   free text
+#   authors                          list; optional (omit for solo work)
+#   url                              conference page
+#   slides, pdf                      optional links
+
+- title: "Prototypes of HVDC connections in a Kuramoto-like power-grid system"
+  type: talk
+  event: "GPU Day 2026"
+  date: "28–29 May"
+  year: 2026
+  location: "Wigner Research Centre for Physics, Budapest, Hungary"
+  authors: ["Kristóf Benedek", "Géza Ódor", "Jeffrey Kelling"]
+
+- title: "A System Divided: Stability and Size Dependence of Segmented Power Grids"
+  type: talk
+  event: "SigmaPhi 2026"
+  year: 2026
+  location: "Crete, Greece"
+  authors: ["Kristóf Benedek", "Damià Gomila", "Pere Colet", "Géza Ódor"]
+
+- title: "Adaptive Reinforcement and Synchronization Dynamics in Power Grid Networks"
+  type: talk
+  event: "Conference on Complex Systems (CCS 2025)"
+  date: "1–5 September"
+  year: 2025
+  location: "Siena, Italy"
+  authors: ["Kristóf Benedek", "Bálint Hartmann", "Géza Ódor", "István Papp", "Michelle T. Cirunay"]
+  url: "https://ccs25.cssociety.org/"
+
+- title: "How Parametrization Influences Synchronization in a Power Grid Network"
+  type: talk
+  event: "Dynamics Days Europe 2025"
+  date: "23–27 June"
+  year: 2025
+  location: "Thessaloniki, Greece"
+  authors: ["Kristóf Benedek", "Bálint Hartmann", "Géza Ódor", "István Papp", "Michelle T. Cirunay"]
+  url: "https://websites.auth.gr/ddeu2025/minisymposia"
+
+- title: "How Structure and Parametrization Influences Synchronization in a Power Grid Network"
+  type: poster
+  event: "ENACS25 (Max Planck Institute for the Physics of Complex Systems)"
+  date: "19–23 May"
+  year: 2025
+  location: "Dresden, Germany"
+  authors: ["Kristóf Benedek", "Géza Ódor", "Bálint Hartmann", "István Papp", "Michelle T. Cirunay"]
+  url: "https://www.pks.mpg.de/enacs25"
+
+- title: "Modelling high-voltage power grids via gradual improvement of parameters"
+  type: talk
+  event: "SciComp24"
+  year: 2024
+  location: "Szeged, Hungary"
+  authors: ["Kristóf Benedek", "Géza Ódor", "Bálint Hartmann", "István Papp", "Shengfeng Deng", "Jeffrey Kelling"]
+  url: "https://scicomp.hu/scicomp-24-konferencia/"
+
+- title: "Using GPUs for modelling complex network dynamics"
+  type: talk
+  event: "GPU Day 2024"
+  year: 2024
+  location: "Budapest, Hungary"
+
+- title: "Network synchronization and stability dynamics of power grids"
+  type: poster
+  event: "MECO 49"
+  year: 2024
+  location: "Kranjska Gora, Slovenia"
+
+- title: "GPUs and highly parallelized codes in network research"
+  type: talk
+  event: "GPU Day 2023"
+  year: 2023
+  location: "Budapest, Hungary"
+
+- title: "Synchronization in high-voltage power grids (first-year MSc results)"
+  type: poster
+  event: "MECO 48"
+  year: 2023
+  location: "Stará Lesná, Slovakia"

@@ -1,0 +1,30 @@
+{{/* Renders data/talks.yaml grouped by year. Usage: {{< talks >}} */}}
+{{- $talks := hugo.Data.talks -}}
+<p class="stats">
+  {{ len (where $talks "type" "in" (slice "talk" "invited")) }} talks ·
+  {{ len (where $talks "type" "poster") }} posters
+</p>
+{{- $years := slice -}}
+{{- range $talks }}{{ $years = $years | append .year }}{{ end -}}
+{{- range ($years | uniq | sort | collections.Reverse) }}
+  {{- $year := . }}
+<h2 id="y{{ $year }}">{{ $year }}</h2>
+<ul class="talk-list">
+  {{- range where $talks "year" $year }}
+  <li class="talk">
+    <span class="talk-title"><span class="badge {{ .type }}">{{ .type }}</span>{{ .title }}</span>
+    {{ with .authors }}<div class="talk-authors">{{ partial "authors.html" . }}</div>{{ end }}
+    <div>
+      {{ if .url }}<a class="talk-event" href="{{ .url }}">{{ .event }}</a>{{ else }}<span class="talk-event">{{ .event }}</span>{{ end }}
+      <span class="talk-where">· {{ with .date }}{{ . }}, {{ end }}{{ .location }}</span>
+    </div>
+    {{ if or .slides .pdf }}
+    <div class="pub-links">
+      {{ with .slides }}<a href="{{ . }}">slides</a>{{ end }}
+      {{ with .pdf }}<a href="{{ . }}">PDF</a>{{ end }}
+    </div>
+    {{ end }}
+  </li>
+  {{- end }}
+</ul>
+{{- end }}

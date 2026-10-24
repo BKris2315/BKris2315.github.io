@@ -1,0 +1,11 @@
+{{/* Embeds a video from the page bundle. Looks for <src>.webm, <src>.mp4 and <src>.jpg (poster).
+     Usage: {{< video src="my-video" autoplay="true" controls="false" loop="true" >}} */}}
+{{- $src := .Get "src" -}}
+{{- $autoplay := eq (.Get "autoplay") "true" -}}
+{{- $controls := ne (.Get "controls") "false" -}}
+{{- $loop := eq (.Get "loop") "true" -}}
+<video {{ with .Page.Resources.Get (printf "%s.jpg" $src) }}poster="{{ .RelPermalink }}"{{ end }}
+  {{ if $controls }}controls{{ end }} {{ if $autoplay }}autoplay muted playsinline{{ end }} {{ if $loop }}loop{{ end }} preload="metadata">
+  {{ with .Page.Resources.Get (printf "%s.webm" $src) }}<source src="{{ .RelPermalink }}" type="video/webm">{{ end }}
+  {{ with .Page.Resources.Get (printf "%s.mp4" $src) }}<source src="{{ .RelPermalink }}" type="video/mp4">{{ end }}
+</video>

@@ -1,0 +1,72 @@
+# Publications, newest first. Rendered on /publications and (top 3) on the home page.
+#
+# Fields:
+#   title, authors (list), year       required
+#   venue                             journal / "arXiv preprint" / "In preparation"
+#   details                           volume, issue, article number, ...
+#   type                              article | preprint | other   (groups the list)
+#   doi, arxiv, pdf, code, url        optional links; arxiv is just the id
+#   note                              optional short remark shown in italics
+#
+# "Benedek, K." / "K. Benedek" / "Kristóf Benedek" are highlighted automatically.
+
+- title: "The effect of HVDC lines in power-grids via Kuramoto modelling"
+  authors: ["Kristóf Benedek", "Géza Ódor"]
+  year: 2026
+  venue: "Chaos, Solitons & Fractals"
+  details: "210, 118671"
+  type: article
+  doi: "10.1016/j.chaos.2026.118671"
+  arxiv: "2512.24122"
+  code: "https://github.com/NetworkingWithKuramoto/kuramoto2"
+
+- title: "Chaos in reason: How chain-of-thought LLMs can look for an answer"
+  authors: ["Gregorio Jaca", "Kristóf Benedek", "János Török"]
+  year: 2026
+  venue: "arXiv preprint"
+  type: preprint
+  arxiv: "2607.27805"
+
+- title: "Quantitative comparison of power grid reinforcements"
+  authors: ["Bálint Hartmann", "Géza Ódor", "Kristóf Benedek", "István Papp", "Michelle T. Cirunay"]
+  year: 2025
+  venue: "Chaos, Solitons & Fractals"
+  details: "200, 117095"
+  type: article
+  doi: "10.1016/j.chaos.2025.117095"
+  arxiv: "2503.05380"
+
+- title: "Studying power-grid synchronization with incremental refinement of model heterogeneity"
+  authors: ["Bálint Hartmann", "Géza Ódor", "Kristóf Benedek", "István Papp"]
+  year: 2025
+  venue: "Chaos: An Interdisciplinary Journal of Nonlinear Science"
+  details: "35(1), 013138"
+  type: article
+  doi: "10.1063/5.0237050"
+  arxiv: "2409.02758"
+
+- title: "Hálózatmegerősítési módszerek kvantitatív összehasonlítása"
+  authors: ["Bálint Hartmann", "Géza Ódor", "Kristóf Benedek", "István Papp", "Michelle T. Cirunay"]
+  year: 2025
+  venue: "Elektrotechnika"
+  details: "118(7–8), 30–32"
+  type: other
+  note: "Hungarian-language summary of “Quantitative comparison of power grid reinforcements”"
+
+- title: "Dynamical heterogeneity and universality of power-grids"
+  authors: ["Bálint Hartmann", "Géza Ódor", "István Papp", "Kristóf Benedek", "Shengfeng Deng", "Jeffrey Kelling"]
+  year: 2024
+  venue: "Sustainable Energy, Grids and Networks"
+  details: "39, 101491"
+  type: article
+  doi: "10.1016/j.segan.2024.101491"
+  arxiv: "2308.15326"
+
+- title: "Improving power-grid systems via topological changes or how self-organized criticality can help power grids"
+  authors: ["Géza Ódor", "István Papp", "Kristóf Benedek", "Bálint Hartmann"]
+  year: 2024
+  venue: "Physical Review Research"
+  details: "6(1), 013194"
+  type: article
+  doi: "10.1103/PhysRevResearch.6.013194"
+  arxiv: "2310.09042"

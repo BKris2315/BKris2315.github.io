@@ -1,0 +1,14 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+{{ .Content }}
+{{ $paginator := .Paginate .Pages }}
+<ul class="post-list">
+  {{ range $paginator.Pages }}{{ partial "post-item.html" . }}{{ end }}
+</ul>
+{{ if gt $paginator.TotalPages 1 }}
+<nav class="pagination">
+  {{ with $paginator.Prev }}<a href="{{ .URL }}">← Newer</a>{{ else }}<span></span>{{ end }}
+  {{ with $paginator.Next }}<a href="{{ .URL }}">Older →</a>{{ end }}
+</nav>
+{{ end }}
+{{ end }}

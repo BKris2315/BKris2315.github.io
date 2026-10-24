@@ -1,0 +1,10 @@
+{{/* Comma-separated author list with the site owner highlighted. */}}
+{{- $out := slice -}}
+{{- range . -}}
+  {{- if or (in . "Benedek") (in . "BENEDEK") -}}
+    {{- $out = $out | append (printf "<span class=\"me\">%s</span>" .) -}}
+  {{- else -}}
+    {{- $out = $out | append . -}}
+  {{- end -}}
+{{- end -}}
+{{- delimit $out ", " | safeHTML -}}

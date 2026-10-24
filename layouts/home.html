@@ -1,0 +1,33 @@
+{{ define "main" }}
+<section class="hero">
+  {{ with resources.Get "images/profile.jpg" }}
+    {{ $img := .Fill "320x320 Center webp q85" }}
+    <img src="{{ $img.RelPermalink }}" width="160" height="160" alt="Portrait of {{ site.Title }}">
+  {{ end }}
+  <div class="hero-text">
+    <h1>{{ site.Title }}</h1>
+    <p class="role">{{ site.Params.role }}</p>
+    <p class="meta">{{ site.Params.affiliation }}</p>
+    <p class="meta">{{ site.Params.location }} · {{ delimit site.Params.emails " · " }}</p>
+    <ul class="links">
+      {{ range site.Params.links }}<li><a href="{{ .url }}">{{ .name }}</a></li>{{ end }}
+    </ul>
+  </div>
+</section>
+
+{{ .Content }}
+
+<h2>Recent publications</h2>
+<ul class="pub-list">
+  {{ range first 3 hugo.Data.publications }}{{ partial "pub.html" . }}{{ end }}
+</ul>
+<p class="more"><a href="{{ "publications/" | relURL }}">All publications →</a></p>
+
+{{ with where site.RegularPages "Section" "blog" }}
+<h2>Latest from the blog</h2>
+<ul class="post-list">
+  {{ range first 3 . }}{{ partial "post-item.html" . }}{{ end }}
+</ul>
+<p class="more"><a href="{{ "blog/" | relURL }}">All posts →</a></p>
+{{ end }}
+{{ end }}

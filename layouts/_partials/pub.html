@@ -1,0 +1,13 @@
+<li class="pub">
+  <span class="pub-title">{{ .title }}</span>
+  <div class="pub-authors">{{ partial "authors.html" .authors }}</div>
+  <div class="pub-venue"><em>{{ .venue }}</em>{{ with .details }} {{ . }}{{ end }} ({{ .year }})</div>
+  {{ with .note }}<div class="pub-note">{{ . }}</div>{{ end }}
+  <div class="pub-links">
+    {{ with .doi }}<a href="https://doi.org/{{ . }}">DOI</a>{{ end }}
+    {{ with .arxiv }}<a href="https://arxiv.org/abs/{{ . }}">arXiv:{{ . }}</a>{{ end }}
+    {{ with .pdf }}<a href="{{ . }}">PDF</a>{{ end }}
+    {{ with .url }}<a href="{{ . }}">link</a>{{ end }}
+    {{ with .code }}<a href="{{ . }}">code</a>{{ end }}
+  </div>
+</li>

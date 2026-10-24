@@ -1,0 +1,6 @@
+{{/* One CV row: left column = when, right column = markdown body.
+     Usage: {{< entry "2024 – present" >}}**Title**, Place{{< /entry >}} */}}
+<div class="cv-row">
+  <div>{{ .Get 0 }}</div>
+  <div>{{ .Inner | .Page.RenderString (dict "display" "block") }}</div>
+</div>
