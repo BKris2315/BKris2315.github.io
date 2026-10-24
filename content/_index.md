@@ -19,6 +19,7 @@ for image recognition and monitoring.
 
 ## News
 
+- **2026-09** · This year I'm teaching the practice classes of *Complex Networks* at BME, with materials I designed.
 - **2026-09** · Our paper on [HVDC lines in Kuramoto power-grid models](https://doi.org/10.1016/j.chaos.2026.118671) is out in *Chaos, Solitons & Fractals*.
 - **2026-07** · New preprint with Gregorio Jaca and János Török: [Chaos in reason: How chain-of-thought LLMs can look for an answer](https://arxiv.org/abs/2607.27805).
 - **2026-05** · Talks at GPU Day 2026 (Budapest) and SigmaPhi 2026 (Crete).

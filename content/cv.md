@@ -64,6 +64,10 @@ Object detection (YOLOv5–v8), dimensionality reduction, active learning for se
 
 ## Teaching
 
+{{< entry "2026 – 2027" >}}
+**Complex Networks**, BME: I design the practice-class materials and teach the practice sessions
+{{< /entry >}}
+
 {{< entry "BME" >}}
 Teaching assistant: *Introduction to Machine Learning* (BMETE15AP61),
 *Introduction to Numerical Algorithms* (BMETE15AP60), *Physics I* (BMETE11AX53)
